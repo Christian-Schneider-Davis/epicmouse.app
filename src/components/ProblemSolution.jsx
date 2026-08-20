@@ -25,7 +25,7 @@ export default function ProblemSolution() {
       <div className="container">
         <Reveal type="fade" className="section-head">
           <span className="eyebrow">For ADHD &amp; distracted brains</span>
-          <h2 className="section-title">You don't need more discipline. You need more dopamine.</h2>
+          <h2 className="section-title">You don't need more discipline. You need more stimulation.</h2>
           <p className="section-sub">
             Traditional productivity tools were not built for brains that run on novelty and reward. Epic Mouse
             was.
