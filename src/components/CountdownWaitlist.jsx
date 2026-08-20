@@ -4,7 +4,7 @@ import WaitlistForm from './shared/WaitlistForm.jsx'
 import Reveal from './shared/Reveal.jsx'
 import Sparkles from './shared/Sparkles.jsx'
 
-const LAUNCH_TARGET = new Date('2026-10-17T00:00:00')
+const LAUNCH_TARGET = new Date('2026-09-21T00:00:00')
 
 function getTimeLeft() {
   const diff = Math.max(0, LAUNCH_TARGET.getTime() - Date.now())
