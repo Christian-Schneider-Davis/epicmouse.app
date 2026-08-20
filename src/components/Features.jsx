@@ -1,7 +1,6 @@
 import {
   LuWandSparkles,
   LuPartyPopper,
-  LuTimer,
   LuFlame,
   LuFocus,
   LuBellRing,
@@ -13,20 +12,20 @@ const FEATURES = [
   {
     icon: LuWandSparkles,
     title: 'A companion that grows with you',
-    body: 'Every writing session feeds your character — new outfits, scenery, and story beats unlock as you go. Nobody wants to leave their companion hanging.',
+    body: 'Every writing session feeds your character. New story beats unlock as you go. Nobody wants to leave their companion hanging.',
     tint: 'coral',
   },
   {
-    icon: LuPartyPopper,
-    title: 'Instant dopamine, on purpose',
-    body: 'Tiny bursts of delight — sparkles, sound, motion — fire the moment you hit a milestone. Your brain gets the reward right when it needs it.',
-    tint: 'butter',
+    icon: LuFocus,
+    title: 'A distraction-free canvas',
+    body: 'One page. Your words. A companion cheering quietly in the background. Everything else fades away while you write.',
+    tint: 'sage',
   },
   {
-    icon: LuTimer,
-    title: 'Gentle focus sprints',
-    body: 'Short, low-pressure writing sprints designed around how ADHD attention actually works — not 90-minute deep-work myths.',
-    tint: 'cape',
+    icon: LuPartyPopper,
+    title: "Engage your brain's reward system intentionally",
+    body: 'Tiny bursts of delight! Sparkles & motion fire the moment you begin typing. Your brain gets the reward right when it needs it.',
+    tint: 'butter',
   },
   {
     icon: LuFlame,
@@ -35,15 +34,9 @@ const FEATURES = [
     tint: 'coral',
   },
   {
-    icon: LuFocus,
-    title: 'A distraction-free canvas',
-    body: 'One page. Your words. A companion cheering quietly in the corner. Everything else fades away while you write.',
-    tint: 'sage',
-  },
-  {
     icon: LuBellRing,
-    title: 'Nudges, not nagging',
-    body: 'Kind, perfectly-timed check-ins that pull you back in — never a guilt trip, always an invitation.',
+    title: 'Incouragment, no guilt-trips',
+    body: 'A simple timer feature with check-ins that pull you back in. Never a guilt trip, always an invitation.',
     tint: 'cape',
   },
 ]
@@ -54,8 +47,8 @@ export default function Features() {
       <div className="container">
         <SectionHeading
           eyebrow="Everything you need"
-          title="Built to make writing feel good again"
-          subtitle="Every feature exists for one reason: to make the next sentence feel just a little easier — and a little more fun — than the last."
+          title="Built to make writing feel even better"
+          subtitle="Every feature exists for one reason: to make the next sentence feel just a little easier and a little more fun than the last."
         />
 
         <div className="features-grid">

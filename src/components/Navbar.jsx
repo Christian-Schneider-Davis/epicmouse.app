@@ -4,7 +4,6 @@ import { LuMenu, LuX } from 'react-icons/lu'
 const LINKS = [
   { href: '#features', label: 'Features' },
   { href: '#how-it-works', label: 'How it works' },
-  { href: '#story', label: 'The Story' },
   { href: '#faq', label: 'FAQ' },
 ]
 
