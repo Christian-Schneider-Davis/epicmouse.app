@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <p>&copy; {YEAR} Epic Mouse. All rights reserved.</p>
+        <p>&copy; {YEAR} Epic Mouse App. All rights reserved.</p>
         <p className="footer-note">Currently in development. Not yet available on the App Store.</p>
       </div>
 

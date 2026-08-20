@@ -4,11 +4,7 @@ import WaitlistForm from './shared/WaitlistForm.jsx'
 import Reveal from './shared/Reveal.jsx'
 import Sparkles from './shared/Sparkles.jsx'
 
-// Placeholder estimated-launch date for the countdown — purely a visual,
-// motivational element. Update this to your real target date before
-// shipping (or remove the countdown block entirely if you'd rather not
-// commit to a public date yet).
-const LAUNCH_TARGET = new Date('2026-11-15T00:00:00')
+const LAUNCH_TARGET = new Date('2026-10-17T00:00:00')
 
 function getTimeLeft() {
   const diff = Math.max(0, LAUNCH_TARGET.getTime() - Date.now())
