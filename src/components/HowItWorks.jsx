@@ -7,7 +7,7 @@ const STEPS = [
     icon: LuTarget,
     step: '01',
     title: 'Set a tiny goal',
-    body: '100 words. 10 minutes. One paragraph. Start absurdly small — momentum matters more than ambition.',
+    body: '100 words. 10 minutes. One paragraph. Start small. Momentum matters more than ambition.',
   },
   {
     icon: LuPencilLine,
@@ -19,13 +19,13 @@ const STEPS = [
     icon: LuSparkle,
     step: '03',
     title: 'Watch your companion react',
-    body: 'Real-time animations and micro-rewards celebrate every bit of progress — instantly, not "eventually."',
+    body: 'Real-time animations and rewards celebrate every bit of progress instantly, not "eventually."',
   },
   {
     icon: LuTrophy,
     step: '04',
-    title: 'Unlock the next chapter',
-    body: 'Hit your goal and your companion levels up — new scenes, gear, and story beats waiting on the other side.',
+    title: 'New content with every chapter',
+    body: 'Hit your goals and new story beats are waiting on the other side.',
   },
 ]
 

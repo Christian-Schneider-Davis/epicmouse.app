@@ -4,14 +4,15 @@ import SectionHeading from './shared/SectionHeading.jsx'
 import Reveal from './shared/Reveal.jsx'
 
 const FAQS = [
+    {
+    q: 'When does Epic Mouse launch?',
+    a: "We're putting the finishing touches on it now. Join the waitlist and you'll be the first to know the moment it's available on the App Store — plus you'll get early access before the general public.",
+  },
   {
     q: 'Do I need to be diagnosed with ADHD to use Epic Mouse?',
     a: "Not at all. Epic Mouse was designed with ADHD brains front of mind, but it's genuinely for anyone who struggles with motivation, procrastination, or blank-page anxiety — students, novelists, journalers, students cramming a thesis, all of it.",
   },
-  {
-    q: 'When does Epic Mouse launch?',
-    a: "We're putting the finishing touches on it now. Join the waitlist and you'll be the first to know the moment it's available on the App Store — plus you'll get early access before the general public.",
-  },
+
   {
     q: 'Will Epic Mouse be free?',
     a: "We're still finalizing pricing. Waitlist members will always be the first to hear about launch pricing and any early-bird offers, before anyone else.",
@@ -22,11 +23,11 @@ const FAQS = [
   },
   {
     q: 'Is my writing private?',
-    a: 'Your words are yours. Epic Mouse is built as a personal writing space first — full privacy details will be published alongside the App Store listing at launch.',
+    a: 'Your words are yours. Epic Mouse is built as a personal writing space first. Full privacy details will be published alongside the App Store listing at launch.',
   },
   {
-    q: "How is this different from habit trackers like Forest or Finch?",
-    a: "Those apps are wonderful, but they're general habit tools. Epic Mouse is purpose-built for writing specifically — the rewards, sprints, and story are all tuned around the act of getting words on the page.",
+    q: "How is this different from any other habit tracker apps?",
+    a: "Those apps are wonderful, but they're general habit tools. Epic Mouse App is purpose-built for writing specifically. The rewards and story are all tuned around the act of getting words on the page.",
   },
 ]
 

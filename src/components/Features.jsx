@@ -35,7 +35,7 @@ const FEATURES = [
   },
   {
     icon: LuBellRing,
-    title: 'Incouragment, no guilt-trips',
+    title: 'Encouragement, no guilt-trips',
     body: 'A simple timer feature with check-ins that pull you back in. Never a guilt trip, always an invitation.',
     tint: 'cape',
   },

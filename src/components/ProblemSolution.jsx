@@ -4,7 +4,7 @@ import Reveal from './shared/Reveal.jsx'
 const PAIN_POINTS = [
   {
     icon: LuCircleSlash,
-    title: 'The blank page feels like a wall',
+    title: 'The blank page can feel like an obstacle',
     body: "You know what you want to write. Somehow that doesn't make starting any easier.",
   },
   {
@@ -47,8 +47,8 @@ export default function ProblemSolution() {
         <Reveal type="fade" delay={200} className="problem-pivot">
           <LuHeart size={20} className="problem-pivot-icon" />
           <p>
-            Epic Mouse trades pressure for play — a companion that rewards you the moment you show up, so writing
-            starts to feel like the good kind of habit.
+            Epic Mouse App is a companion that rewards you the moment you show up, so writing
+            starts to feel like the good kind of habit trading pressure for play.
           </p>
           <a href="#features" className="problem-pivot-link">
             See how it works <LuArrowRight size={16} />

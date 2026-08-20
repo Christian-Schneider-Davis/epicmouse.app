@@ -4,7 +4,6 @@ import VideoShowcase from './components/VideoShowcase.jsx'
 import ProblemSolution from './components/ProblemSolution.jsx'
 import Features from './components/Features.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
-import StoryWorld from './components/StoryWorld.jsx'
 import ADHDScience from './components/ADHDScience.jsx'
 import FAQ from './components/FAQ.jsx'
 import CountdownWaitlist from './components/CountdownWaitlist.jsx'
@@ -21,7 +20,6 @@ function App() {
         <ProblemSolution />
         <Features />
         <HowItWorks />
-        {/* <StoryWorld />  */}
         <ADHDScience />
         <FAQ />
         <CountdownWaitlist />
