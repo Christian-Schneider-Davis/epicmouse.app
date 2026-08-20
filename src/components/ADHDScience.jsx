@@ -5,7 +5,7 @@ const PRINCIPLES = [
   {
     icon: LuZap,
     title: 'Immediate feedback',
-    body: 'ADHD brains are drawn to fast, tangible rewards. Epic Mouse responds in real time instead of asking you to wait for "someday" motivation.',
+    body: 'ADHD brains are drawn to fast, tangible rewards. Epic Mouse App responds in real time instead of asking you to wait for "someday" motivation.',
   },
   {
     icon: LuRepeat,
@@ -15,7 +15,7 @@ const PRINCIPLES = [
   {
     icon: LuUsers,
     title: 'Structure without pressure',
-    body: 'Small sprints and gentle nudges act like a body double — just enough external structure to get moving, none of the pressure.',
+    body: 'Gentle encouragement and just enough external structure to get moving, none of the pressure.',
   },
   {
     icon: LuShieldCheck,
@@ -36,7 +36,7 @@ export default function ADHDScience() {
             when reward comes quickly and pressure stays low. That's the whole design brief.
           </p>
           <p className="science-disclaimer">
-            Epic Mouse is a motivation and focus companion, not a medical or clinical treatment for ADHD.
+            Epic Mouse app is a motivation and focus companion, not a medical or clinical treatment for ADHD.
           </p>
         </Reveal>
 

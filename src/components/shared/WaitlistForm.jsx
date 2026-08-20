@@ -3,14 +3,23 @@ import { LuArrowRight, LuCheck, LuLoaderCircle } from 'react-icons/lu'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+// --- Formspree setup (2 minutes, no backend required) -----------------
+// 1. Go to https://formspree.io and create a free account.
+// 2. Create a new form with the recipient email set to epicmouseapp@gmail.com.
+// 3. Formspree gives you a form ID that looks like "xyzabcde" — paste it below.
+//    (This ID is meant to be public/client-side — it's not a secret.)
+const FORMSPREE_FORM_ID = 'YOUR_FORM_ID_HERE'
+const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_FORM_ID}`
+
 /**
  * Email capture for the pre-launch waitlist.
  *
- * NOTE FOR INTEGRATION: this form is front-end only — it validates the
- * email and simulates a submit so the experience feels real, but nothing
- * is sent anywhere yet. Before shipping, wire `handleSubmit` up to a real
- * endpoint (Formspree, a Supabase/Firebase function, ConvertKit, your own
- * API route, etc.) and swap the simulated delay for the actual request.
+ * On submit, this posts to Formspree, which relays a notification email to
+ * epicmouseapp@gmail.com with the signer's address and a submission
+ * timestamp. Swap FORMSPREE_FORM_ID above for your own form ID, or replace
+ * the fetch call in handleSubmit with a different backend entirely
+ * (a Supabase/Firebase function, your own API route, etc.) if you'd rather
+ * not depend on Formspree.
  */
 export default function WaitlistForm({
   variant = 'inline',
@@ -33,11 +42,29 @@ export default function WaitlistForm({
     setStatus('loading')
     setErrorMsg('')
 
-    // Simulated network round-trip. Replace with a real fetch() to your
-    // waitlist endpoint — see note above.
-    await new Promise((resolve) => setTimeout(resolve, 900))
+    const signedUpAt = new Date().toLocaleString('en-US', {
+      dateStyle: 'long',
+      timeStyle: 'short',
+    })
 
-    setStatus('success')
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          email: email.trim(),
+          message: `This user, ${email.trim()}, has signed up for the Epic Mouse App waitlist on ${signedUpAt}.`,
+          _subject: 'New Epic Mouse App waitlist signup',
+        }),
+      })
+
+      if (!res.ok) throw new Error('Formspree request failed')
+
+      setStatus('success')
+    } catch {
+      setStatus('error')
+      setErrorMsg("Something went wrong on our end — mind trying again in a moment?")
+    }
   }
 
   if (status === 'success') {

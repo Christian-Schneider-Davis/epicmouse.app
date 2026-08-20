@@ -66,7 +66,7 @@ export default function CountdownWaitlist() {
               <LuUsers size={16} /> Early access, first come first served
             </span>
             <span className="countdown-meta-item">
-              <LuMail size={16} /> One launch email. No spam, ever.
+              <LuMail size={16} /> One launch email. Updates only, promise.
             </span>
           </div>
         </Reveal>
