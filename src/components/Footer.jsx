@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-brand">
           <div className="footer-brand-row">
             <img src="/apple-touch-icon.png" alt="" className="footer-icon" width={32} height={32} />
-            <span className="footer-name">Epic Mouse</span>
+            <span className="footer-name">Epic Mouse App</span>
           </div>
           <p className="footer-tagline">As you write, the story comes alive.</p>
         </div>
@@ -23,13 +23,7 @@ export default function Footer() {
         </nav>
 
         <div className="footer-social">
-          <a href="#" aria-label="Epic Mouse on Instagram" className="footer-social-icon">
-            <LuInstagram size={18} />
-          </a>
-          <a href="#" aria-label="Epic Mouse on Twitter / X" className="footer-social-icon">
-            <LuTwitter size={18} />
-          </a>
-          <a href="mailto:hello@epicmouse.app" aria-label="Email Epic Mouse" className="footer-social-icon">
+          <a href="mailto:epicmouseapp@gmail.com" aria-label="Email Epic Mouse" className="footer-social-icon">
             <LuMail size={18} />
           </a>
         </div>

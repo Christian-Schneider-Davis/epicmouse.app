@@ -21,7 +21,7 @@ function App() {
         <ProblemSolution />
         <Features />
         <HowItWorks />
-        <StoryWorld />
+        {/* <StoryWorld /> */}
         <ADHDScience />
         <FAQ />
         <CountdownWaitlist />

@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="container nav-inner">
         <a href="#top" className="nav-brand" onClick={handleLinkClick}>
           <img src="/apple-touch-icon.png" alt="" className="nav-brand-icon" width={36} height={36} />
-          <span className="nav-brand-name">Epic Mouse</span>
+          <span className="nav-brand-name">Epic Mouse App</span>
         </a>
 
         <nav className="nav-links" aria-label="Primary">

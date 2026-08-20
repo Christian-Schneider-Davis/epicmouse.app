@@ -24,7 +24,7 @@ export default function VideoShowcase() {
             As you write, <span className="text-gradient">the story comes alive</span>
           </h2>
           <p className="section-sub">
-            This little guy is your writing companion — a hand‑illustrated character who reacts, grows, and
+            This little mouse is your writing companion. A hand‑illustrated character who reacts, grows, and
             levels up right alongside your work. Watch what happens after just one good writing session.
           </p>
         </Reveal>
@@ -47,7 +47,6 @@ export default function VideoShowcase() {
                   <LuPlay size={28} />
                 </span>
                 <span className="showcase-play-label">
-                  <LuVolume2 size={14} /> Watch with sound
                 </span>
               </button>
             )}
