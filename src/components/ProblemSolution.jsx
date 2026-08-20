@@ -48,7 +48,7 @@ export default function ProblemSolution() {
           <LuHeart size={20} className="problem-pivot-icon" />
           <p>
             Epic Mouse App is a companion that rewards you the moment you show up, so writing
-            starts to feel like the good kind of habit trading pressure for play.
+            starts to feel like the good kind of habit, trading pressure for play.
           </p>
           <a href="#features" className="problem-pivot-link">
             See how it works <LuArrowRight size={16} />

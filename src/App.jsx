@@ -21,9 +21,11 @@ function App() {
         <Features />
         <HowItWorks />
         <ADHDScience />
-        <FAQ />
+        <FAQ />    
         <CountdownWaitlist />
         <FinalCTA />
+   
+
       </main>
       <Footer />
     </>

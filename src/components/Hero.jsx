@@ -23,7 +23,7 @@ export default function Hero() {
 
           <Reveal type="fade" delay={80}>
             <h1 className="hero-title">
-              Write a little.
+              Start writing.
               <br />
               <span className="text-gradient">Feel amazing.</span>
             </h1>
@@ -31,7 +31,7 @@ export default function Hero() {
 
           <Reveal type="fade" delay={160}>
             <p className="hero-sub">
-              Epic Mouse App is the writing companion built for writer and authors (with ADHD brains in mind) and anyone whose motivation needs a
+              Epic Mouse App is a writing companion built for writers. Initially made with ADHD brains in mind, the creators quickly realized this tool is for anyone whoses motivation needs a
               little spark. Every sentence you write grows a tiny magical friend who's rooting for you, one word at a time.
             </p>
           </Reveal>
@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
             <div className="hero-badges">
               <AppStoreBadge size="sm" />
-              <p className="hero-badges-note">Free to join &middot; Updates only, promise</p>
+              <p className="hero-badges-note">Free to join &middot; Updates only, promise &middot;</p>
             </div>
           </Reveal>
 
