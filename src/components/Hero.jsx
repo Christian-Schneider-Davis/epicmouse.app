@@ -31,8 +31,8 @@ export default function Hero() {
 
           <Reveal type="fade" delay={160}>
             <p className="hero-sub">
-              Epic Mouse App is a writing companion built for writers. Initially made with ADHD brains in mind, the creators quickly realized this tool is for anyone whoses motivation needs a
-              little spark. Every sentence you write grows a tiny magical friend who's rooting for you, one word at a time.
+              Epic Mouse App is a writing companion for anyone whose motivation needs a
+              little spark. Initially created with ADHD brains in mind, this app has something for everyone. Every sentence you write grows a tiny magical friend who's rooting for you, one word at a time.
             </p>
           </Reveal>
 
