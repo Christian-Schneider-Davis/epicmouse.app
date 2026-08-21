@@ -63,10 +63,10 @@ export default function CountdownWaitlist() {
 
           <div className="countdown-meta">
             <span className="countdown-meta-item">
-              <LuUsers size={16} /> Early access, first come first served
+              <LuUsers size={16} /> Early access, first come first served &middot;
             </span>
             <span className="countdown-meta-item">
-              <LuMail size={16} /> One launch email. Updates only, promise.
+              <LuMail size={16} /> One launch email only, promise &middot; We’ll never sell or share your information &middot;
             </span>
           </div>
         </Reveal>
