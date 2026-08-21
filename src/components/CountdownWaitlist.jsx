@@ -63,10 +63,10 @@ export default function CountdownWaitlist() {
 
           <div className="countdown-meta">
             <span className="countdown-meta-item">
-              <LuUsers size={16} /> Early access, first come first served &middot;
+              <LuUsers size={16} />Early access, first come first served &middot;
             </span>
             <span className="countdown-meta-item">
-              <LuMail size={16} /> One launch email only, promise &middot; We’ll never sell or share your information &middot;
+              <LuMail size={16} />One launch email only, promise &middot; We’ll never sell or share your information &middot;
             </span>
           </div>
         </Reveal>
@@ -156,11 +156,15 @@ export default function CountdownWaitlist() {
         }
         .countdown-meta-item {
           display: inline-flex;
-          align-items: center;
+          align-items: flex-start;
           gap: 6px;
           font-size: 0.82rem;
           color: hsl(270deg 30% 84%);
           font-weight: 500;
+        }
+        .countdown-meta-item svg {
+          flex-shrink: 0;
+          margin-top: 2px; 
         }
       `}</style>
     </section>
