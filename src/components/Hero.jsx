@@ -42,7 +42,8 @@ export default function Hero() {
             </div>
             <div className="hero-badges">
               <AppStoreBadge size="sm" />
-              <p className="hero-badges-note">Free to join &middot; Updates only, promise &middot;</p>
+              <p className="hero-badges-note">&middot; Free to join &middot; Updates only &middot;</p> 
+                <p className='hero-badges-note'>&middot; We’ll never sell or share your information &middot;</p>
             </div>
           </Reveal>
 
@@ -160,14 +161,17 @@ export default function Hero() {
         .hero-badges {
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 14px;
           flex-wrap: wrap;
           margin-bottom: 36px;
         }
         .hero-badges-note {
-          font-size: 0.85rem;
+          font-size: .7rem;
           color: var(--ink-faint);
           font-weight: 500;
+          align-content: center;
+          text-align: center;
         }
         .hero-trust {
           display: flex;
