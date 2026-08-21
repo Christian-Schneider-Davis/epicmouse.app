@@ -154,8 +154,9 @@ const formStyles = `
     border-color: #e0554a;
   }
   .waitlist-btn {
-    flex: 0 0 auto;
-    width: 155px;
+    flex: auto;
+    width: 35%;
+    padding: 10px;
   }
   .waitlist-spinner {
     animation: spin-slow 0.9s linear infinite;
