@@ -1,8 +1,0 @@
-# Firebase project values —
-# Both apps share one Firebase project (one signed-in session deployed together under epicmouse.app).
-VITE_FIREBASE_API_KEY=AIzaSyAVeKCgQ6mQiN7Vvxs-L-u7w7mWjtd4E3M
-VITE_FIREBASE_AUTH_DOMAIN=epic-mouse-app.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=epic-mouse-app
-VITE_FIREBASE_STORAGE_BUCKET=epic-mouse-app.firebasestorage.app
-VITE_FIREBASE_MESSAGING_SENDER_ID=403153083634
-VITE_FIREBASE_APP_ID=1:403153083634:web:7231151236c1c649bd846b
