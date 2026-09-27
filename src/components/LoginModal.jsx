@@ -211,7 +211,7 @@ export default function LoginModal() {
                 <FcGoogle size={18} /> Continue with Google
               </button>
               <button type="button" className="btn btn-secondary btn-block" onClick={signInApple}>
-                <FaApple size={18} /> Continue with Apple
+                <FaApple size={18} /> Coming soon
               </button>
             </div>
           </>
