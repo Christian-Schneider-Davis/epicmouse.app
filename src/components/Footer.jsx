@@ -1,8 +1,13 @@
+import { useState } from 'react'
 import { LuInstagram, LuTwitter, LuMail } from 'react-icons/lu'
+import Terms from './Terms.jsx'
+import { reopenCookiePreferences } from '../lib/cookieConsent.js'
 
 const YEAR = new Date().getFullYear()
 
 export default function Footer() {
+  const [termsOpen, setTermsOpen] = useState(false)
+
   return (
     <footer className="footer">
       <div className="container footer-inner">
@@ -19,6 +24,12 @@ export default function Footer() {
           <a href="#how-it-works">How it works</a>
           <a href="#faq">FAQ</a>
           <a href="#waitlist">Join waitlist</a>
+          <button type="button" className="footer-link-btn" onClick={() => setTermsOpen(true)}>
+            Terms
+          </button>
+          <button type="button" className="footer-link-btn" onClick={reopenCookiePreferences}>
+            Cookie preferences
+          </button>
         </nav>
 
         <div className="footer-social">
@@ -32,6 +43,8 @@ export default function Footer() {
         <p>&copy; {YEAR} Epic Mouse App. All rights reserved.</p>
         <p className="footer-note">Currently in development. Not yet available on the App Store.</p>
       </div>
+
+      <Terms open={termsOpen} onClose={() => setTermsOpen(false)} />
 
       <style>{`
         .footer {
@@ -67,6 +80,7 @@ export default function Footer() {
         }
         .footer-links {
           display: flex;
+          align-items: center;
           gap: 26px;
           flex-wrap: wrap;
         }
@@ -76,6 +90,19 @@ export default function Footer() {
           color: var(--ink-soft);
         }
         .footer-links a:hover {
+          color: var(--coral-dark);
+        }
+        .footer-link-btn {
+          background: none;
+          border: none;
+          padding: 0;
+          font-family: inherit;
+          font-weight: 600;
+          font-size: 0.9rem;
+          color: var(--ink-soft);
+          cursor: pointer;
+        }
+        .footer-link-btn:hover {
           color: var(--coral-dark);
         }
         .footer-social {

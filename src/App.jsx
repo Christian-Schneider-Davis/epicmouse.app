@@ -1,5 +1,6 @@
 import { AuthProvider } from './context/AuthContext.jsx'
 import LoginModal from './components/LoginModal.jsx'
+import CookieConsentBanner from './components/CookieConsentBanner.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import VideoShowcase from './components/VideoShowcase.jsx'
@@ -31,6 +32,7 @@ function App() {
       </main>
       <Footer />
       <LoginModal />
+      <CookieConsentBanner />
     </AuthProvider>
   )
 }

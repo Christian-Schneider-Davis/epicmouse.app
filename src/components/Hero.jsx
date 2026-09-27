@@ -43,7 +43,7 @@ export default function Hero() {
           <Reveal type="fade" delay={220}>
             <div className="hero-pc-cta">
               <button type="button" className="btn btn-secondary" onClick={openLogin}>
-                For Mac & PC <LuArrowRight size={16} />
+                For PC & Mac <LuArrowRight size={16} />
               </button>
               <span className="hero-pc-cta-note">No download — write in your browser today</span>
             </div>
