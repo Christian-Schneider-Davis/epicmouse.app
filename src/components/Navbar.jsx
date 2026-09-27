@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { LuMenu, LuX } from 'react-icons/lu'
+import { LuMenu, LuX, LuArrowRight } from 'react-icons/lu'
+import { useAuth } from '../context/AuthContext.jsx'
 
 const LINKS = [
   { href: '#features', label: 'Features' },
@@ -10,6 +11,8 @@ const LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { user, authChecked, openLogin, goToApp } = useAuth()
+  const signedIn = authChecked && Boolean(user)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -44,9 +47,20 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta">
-          <a href="#waitlist" className="btn btn-primary btn-sm">
-            Join Waitlist
-          </a>
+          {signedIn ? (
+            <button type="button" className="btn btn-primary btn-sm" onClick={goToApp}>
+              Open App <LuArrowRight size={16} />
+            </button>
+          ) : (
+            <>
+              <button type="button" className="btn btn-ghost nav-login-btn" onClick={openLogin}>
+                Log in
+              </button>
+              <a href="#waitlist" className="btn btn-primary btn-sm">
+                Join Waitlist
+              </a>
+            </>
+          )}
         </div>
 
         <button
@@ -66,9 +80,34 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#waitlist" className="btn btn-primary btn-block" onClick={handleLinkClick}>
-            Join Waitlist
-          </a>
+          {signedIn ? (
+            <button
+              type="button"
+              className="btn btn-primary btn-block"
+              onClick={() => {
+                handleLinkClick()
+                goToApp()
+              }}
+            >
+              Open App <LuArrowRight size={16} />
+            </button>
+          ) : (
+            <>
+              <button
+                type="button"
+                className="btn btn-secondary btn-block"
+                onClick={() => {
+                  handleLinkClick()
+                  openLogin()
+                }}
+              >
+                Log in
+              </button>
+              <a href="#waitlist" className="btn btn-primary btn-block" onClick={handleLinkClick}>
+                Join Waitlist
+              </a>
+            </>
+          )}
         </div>
       )}
 
@@ -124,6 +163,15 @@ export default function Navbar() {
         }
         .nav-link:hover {
           color: var(--ink);
+        }
+        .nav-cta {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .nav-login-btn {
+          font-size: 0.9rem;
+          padding: 11px 16px;
         }
         .nav-burger {
           display: none;

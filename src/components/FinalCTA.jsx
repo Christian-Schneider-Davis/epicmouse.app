@@ -1,7 +1,11 @@
 import AppStoreBadge from './shared/AppStoreBadge.jsx'
+import GooglePlayBadge from './shared/GooglePlayBadge.jsx'
 import Reveal from './shared/Reveal.jsx'
+import { useAuth } from '../context/AuthContext.jsx'
 
 export default function FinalCTA() {
+  const { openLogin } = useAuth()
+
   return (
     <section className="final-cta section-tight">
       <div className="container">
@@ -9,14 +13,20 @@ export default function FinalCTA() {
           <div className="final-cta-copy">
             <h2 className="final-cta-title">Your story is waiting to be written.</h2>
             <p className="final-cta-sub">
-              One tiny mouse, one blank page, and a whole world that grows with every word. Join now and be among
-              the first to open the app.
+              One tiny mouse, one blank page, and a whole world that grows with every word. The PC version is
+              live right now — Apple App Store and Google Play follow on Oct 1.
             </p>
             <div className="final-cta-actions">
-              <a href="#waitlist" className="btn btn-primary">
+              <button type="button" className="btn btn-primary" onClick={openLogin}>
+                Try it free on PC
+              </button>
+              <a href="#waitlist" className="btn btn-secondary">
                 Join the waitlist
               </a>
-              <AppStoreBadge />
+            </div>
+            <div className="final-cta-badges">
+              <AppStoreBadge size="sm" />
+              <GooglePlayBadge size="sm" />
             </div>
           </div>
           <div className="final-cta-visual" aria-hidden="true">
@@ -50,12 +60,19 @@ export default function FinalCTA() {
         .final-cta-sub {
           color: var(--ink-soft);
           max-width: 440px;
-          margin-bottom: 30px;
+          margin-bottom: 26px;
         }
         .final-cta-actions {
           display: flex;
           align-items: center;
-          gap: 18px;
+          gap: 14px;
+          flex-wrap: wrap;
+          margin-bottom: 18px;
+        }
+        .final-cta-badges {
+          display: flex;
+          align-items: center;
+          gap: 12px;
           flex-wrap: wrap;
         }
         .final-cta-visual {
@@ -84,6 +101,9 @@ export default function FinalCTA() {
             margin-inline: auto;
           }
           .final-cta-actions {
+            justify-content: center;
+          }
+          .final-cta-badges {
             justify-content: center;
           }
           .final-cta-visual {

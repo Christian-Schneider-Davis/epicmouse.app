@@ -1,6 +1,8 @@
 node_modules
 dist
 dist-ssr
+public-site
+.firebase
 *.local
 
 .DS_Store
@@ -9,3 +11,7 @@ npm-debug.log*
 epicmouse.app parts
 Formspree Email Submissions.url
 README.md
+
+.env
+.env.local
+.env.example

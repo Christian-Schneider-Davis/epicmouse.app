@@ -1,12 +1,12 @@
-import { FaApple } from 'react-icons/fa'
+import { FaGooglePlay } from 'react-icons/fa'
 
-export default function AppStoreBadge({ size = 'md', href = '#waitlist' }) {
+export default function GooglePlayBadge({ size = 'md', href = '#waitlist' }) {
   return (
     <a href={href} className={`asb asb--${size}`}>
-      <FaApple className="asb-icon" aria-hidden="true" />
+      <FaGooglePlay className="asb-icon asb-icon--play" aria-hidden="true" />
       <span className="asb-copy">
-        <span className="asb-eyebrow">Coming Soon</span>
-        <span className="asb-store">App Store</span>
+        <span className="asb-eyebrow">Download now</span>
+        <span className="asb-store">Google Play</span>
       </span>
       <style>{`
         .asb {
@@ -30,6 +30,9 @@ export default function AppStoreBadge({ size = 'md', href = '#waitlist' }) {
           font-size: 1.9rem;
           flex-shrink: 0;
         }
+        .asb-icon--play {
+          font-size: 1.5rem;
+        }
         .asb-copy {
           display: flex;
           flex-direction: column;
@@ -51,7 +54,7 @@ export default function AppStoreBadge({ size = 'md', href = '#waitlist' }) {
           border-radius: 11px;
         }
         .asb--sm .asb-icon {
-          font-size: 1.4rem;
+          font-size: 1.15rem;
         }
         .asb--sm .asb-store {
           font-size: 0.92rem;

@@ -1,10 +1,14 @@
-import { LuFlame, LuSparkles, LuBookOpen, LuPlay } from 'react-icons/lu'
+import { LuFlame, LuSparkles, LuBookOpen, LuPlay, LuArrowRight } from 'react-icons/lu'
 import WaitlistForm from './shared/WaitlistForm.jsx'
 import AppStoreBadge from './shared/AppStoreBadge.jsx'
+import GooglePlayBadge from './shared/GooglePlayBadge.jsx'
 import Sparkles from './shared/Sparkles.jsx'
 import Reveal from './shared/Reveal.jsx'
+import { useAuth } from '../context/AuthContext.jsx'
 
 export default function Hero() {
+  const { openLogin } = useAuth()
+
   return (
     <section id="top" className="hero">
       <div className="hero-bg" aria-hidden="true">
@@ -17,7 +21,7 @@ export default function Hero() {
         <div className="hero-copy">
           <Reveal type="fade">
             <span className="eyebrow hero-eyebrow">
-              <LuSparkles size={14} /> Coming soon &middot; iOS
+              <LuSparkles size={14} /> Live now on PC & Google Play Store
             </span>
           </Reveal>
 
@@ -36,13 +40,23 @@ export default function Hero() {
             </p>
           </Reveal>
 
+          <Reveal type="fade" delay={220}>
+            <div className="hero-pc-cta">
+              <button type="button" className="btn btn-secondary" onClick={openLogin}>
+                For Mac & PC <LuArrowRight size={16} />
+              </button>
+              <span className="hero-pc-cta-note">No download — write in your browser today</span>
+            </div>
+          </Reveal>
+
           <Reveal type="fade" delay={240}>
             <div className="hero-actions">
               <WaitlistForm />
             </div>
             <div className="hero-badges">
               <AppStoreBadge size="sm" />
-              <p className="hero-badges-note">&middot; Free to join &middot; Updates only &middot;</p> 
+              <GooglePlayBadge size="sm" />
+              <p className="hero-badges-note">&middot; Free to join &middot; Updates only &middot;</p>
                 <p className='hero-badges-note'>&middot; We’ll never sell or share your information &middot;</p>
             </div>
           </Reveal>
@@ -152,7 +166,19 @@ export default function Hero() {
           font-size: clamp(1.02rem, 1.6vw, 1.18rem);
           color: var(--ink-soft);
           max-width: 540px;
-          margin-bottom: 32px;
+          margin-bottom: 28px;
+        }
+        .hero-pc-cta {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          flex-wrap: wrap;
+          margin-bottom: 22px;
+        }
+        .hero-pc-cta-note {
+          font-size: 0.82rem;
+          color: var(--ink-faint);
+          font-weight: 500;
         }
         .hero-actions {
           max-width: 520px;
@@ -263,6 +289,9 @@ export default function Hero() {
           }
           .hero-sub {
             margin-inline: auto;
+          }
+          .hero-pc-cta {
+            justify-content: center;
           }
           .hero-actions {
             margin-inline: auto;

@@ -1,3 +1,5 @@
+import { AuthProvider } from './context/AuthContext.jsx'
+import LoginModal from './components/LoginModal.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import VideoShowcase from './components/VideoShowcase.jsx'
@@ -12,7 +14,7 @@ import Footer from './components/Footer.jsx'
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Navbar />
       <main>
         <Hero />
@@ -21,14 +23,15 @@ function App() {
         <Features />
         <HowItWorks />
         <ADHDScience />
-        <FAQ />    
+        <FAQ />
         <CountdownWaitlist />
         <FinalCTA />
-   
+
 
       </main>
       <Footer />
-    </>
+      <LoginModal />
+    </AuthProvider>
   )
 }
 

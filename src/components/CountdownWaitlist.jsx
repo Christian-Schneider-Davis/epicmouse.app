@@ -44,8 +44,9 @@ export default function CountdownWaitlist() {
           </span>
           <h2 className="countdown-title">Be first through the door</h2>
           <p className="countdown-sub">
-            Join the waitlist for early access, a founding-writer badge in the app, and updates as we get closer
-            to launch. Estimated arrival:
+            The PC version is live right now — this countdown is for the Apple App Store and Google Play
+            launch. Join the waitlist for early access, a founding-writer badge in the app, and updates as
+            we get closer. Estimated arrival:
           </p>
 
           <div className="countdown-timer" role="timer" aria-live="off">
@@ -164,7 +165,7 @@ export default function CountdownWaitlist() {
         }
         .countdown-meta-item svg {
           flex-shrink: 0;
-          margin-top: 2px; 
+          margin-top: 2px;
         }
       `}</style>
     </section>
