@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { LuInstagram, LuTwitter, LuMail } from 'react-icons/lu'
+import { LuInstagram, LuTwitter, LuMail, LuSettings } from 'react-icons/lu'
 import Terms from './Terms.jsx'
-import { reopenCookiePreferences } from '../lib/cookieConsent.js'
+import DeleteAccountModal from './DeleteAccountModal.jsx'
+import AccountSettingsModal from './AccountSettingsModal.jsx'
 
 const YEAR = new Date().getFullYear()
 
 export default function Footer() {
   const [termsOpen, setTermsOpen] = useState(false)
+  const [deleteOpen, setDeleteOpen] = useState(false)
+  const [settingsOpen, setSettingsOpen] = useState(false)
 
   return (
     <footer className="footer">
@@ -26,15 +29,20 @@ export default function Footer() {
           <button type="button" className="footer-link-btn" onClick={() => setTermsOpen(true)}>
             Terms
           </button>
-          <button type="button" className="footer-link-btn" onClick={reopenCookiePreferences}>
-            Cookie preferences
-          </button>
         </nav>
 
         <div className="footer-social">
           <a href="mailto:epicmouseapp@gmail.com" aria-label="Email Epic Mouse" className="footer-social-icon">
             <LuMail size={18} />
           </a>
+          <button
+            type="button"
+            className="footer-social-icon"
+            aria-label="Settings"
+            onClick={() => setSettingsOpen(true)}
+          >
+            <LuSettings size={18} />
+          </button>
         </div>
       </div>
 
@@ -44,6 +52,12 @@ export default function Footer() {
       </div>
 
       <Terms open={termsOpen} onClose={() => setTermsOpen(false)} />
+      <DeleteAccountModal open={deleteOpen} onClose={() => setDeleteOpen(false)} />
+      <AccountSettingsModal
+        open={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        onRequestDelete={() => setDeleteOpen(true)}
+      />
 
       <style>{`
         .footer {
@@ -111,12 +125,15 @@ export default function Footer() {
         .footer-social-icon {
           width: 38px;
           height: 38px;
+          padding: 0;
           border-radius: 50%;
           background: white;
           border: 1px solid hsl(262deg 25% 90%);
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
+          font-family: inherit;
           color: var(--ink-soft);
           transition: color 0.2s ease, border-color 0.2s ease;
         }
