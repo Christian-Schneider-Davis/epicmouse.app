@@ -4,7 +4,8 @@ import Reveal from './shared/Reveal.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 
 export default function Hero() {
-  const { openLogin } = useAuth()
+  const { user, authChecked, openLogin, goToApp } = useAuth()
+  const signedIn = authChecked && Boolean(user)
 
   return (
     <section id="top" className="hero">
@@ -39,8 +40,8 @@ export default function Hero() {
 
           <Reveal type="fade" delay={220}>
             <div className="hero-pc-cta">
-              <button type="button" className="btn btn-secondary" onClick={openLogin}>
-                Try it free now <LuArrowRight size={16} />
+              <button type="button" className="btn btn-secondary" onClick={signedIn ? goToApp : openLogin}>
+                {signedIn ? 'Begin writing' : 'Try it free now'} <LuArrowRight size={16} />
               </button>
               <span className="hero-pc-cta-note">No download — write in your browser today</span>
             </div>

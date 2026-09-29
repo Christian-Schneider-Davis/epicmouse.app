@@ -2,7 +2,8 @@ import Reveal from './shared/Reveal.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 
 export default function FinalCTA() {
-  const { openLogin } = useAuth()
+  const { user, authChecked, openLogin, goToApp } = useAuth()
+  const signedIn = authChecked && Boolean(user)
 
   return (
     <section className="final-cta section-tight">
@@ -15,8 +16,8 @@ export default function FinalCTA() {
               now on PC.
             </p>
             <div className="final-cta-actions">
-              <button type="button" className="btn btn-primary" onClick={openLogin}>
-                Try it free now
+              <button type="button" className="btn btn-primary" onClick={signedIn ? goToApp : openLogin}>
+                {signedIn ? 'Begin writing' : 'Try it free now'}
               </button>
             </div>
           </div>
