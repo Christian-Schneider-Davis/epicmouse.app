@@ -52,14 +52,9 @@ export default function Navbar() {
               Open App <LuArrowRight size={16} />
             </button>
           ) : (
-            <>
-              <button type="button" className="btn btn-ghost nav-login-btn" onClick={openLogin}>
-                Log in
-              </button>
-              <a href="#waitlist" className="btn btn-primary btn-sm">
-                Join Waitlist
-              </a>
-            </>
+            <button type="button" className="btn btn-ghost nav-login-btn" onClick={openLogin}>
+              Log in
+            </button>
           )}
         </div>
 
@@ -92,21 +87,16 @@ export default function Navbar() {
               Open App <LuArrowRight size={16} />
             </button>
           ) : (
-            <>
-              <button
-                type="button"
-                className="btn btn-secondary btn-block"
-                onClick={() => {
-                  handleLinkClick()
-                  openLogin()
-                }}
-              >
-                Log in
-              </button>
-              <a href="#waitlist" className="btn btn-primary btn-block" onClick={handleLinkClick}>
-                Join Waitlist
-              </a>
-            </>
+            <button
+              type="button"
+              className="btn btn-secondary btn-block"
+              onClick={() => {
+                handleLinkClick()
+                openLogin()
+              }}
+            >
+              Log in
+            </button>
           )}
         </div>
       )}

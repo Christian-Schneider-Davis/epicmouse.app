@@ -6,7 +6,7 @@ import Reveal from './shared/Reveal.jsx'
 const FAQS = [
     {
     q: 'When does Epic Mouse launch?',
-    a: "We're putting the finishing touches on it now. Join the waitlist and you'll be the first to know the moment it's available on the App Store — plus you'll get early access before the general public.",
+    a: "Epic Mouse is live right now — free to try on PC. No waitlist, no download, just sign in and start writing.",
   },
   {
     q: 'Do I need to be diagnosed with ADHD to use Epic Mouse?',
@@ -15,15 +15,15 @@ const FAQS = [
 
   {
     q: 'Will Epic Mouse be free?',
-    a: "We're still finalizing pricing. Waitlist members will always be the first to hear about launch pricing and any early-bird offers, before anyone else.",
+    a: "The PC version is free to try right now. If that ever changes, we'll be upfront about it here first.",
   },
   {
     q: 'What devices will it work on?',
-    a: "Epic Mouse is launching first on iPhone. We're listening closely to waitlist feedback to help decide what comes next.",
+    a: "Epic Mouse runs right in your browser on PC and Mac — no download required.",
   },
   {
     q: 'Is my writing private?',
-    a: 'Your words are yours. Epic Mouse is built as a personal writing space first. Full privacy details will be published alongside the App Store listing at launch.',
+    a: 'Your words are yours. Epic Mouse is built as a personal writing space first. Full privacy details are in our Terms & Privacy, linked in the footer.',
   },
   {
     q: "How is this different from any other habit tracker apps?",

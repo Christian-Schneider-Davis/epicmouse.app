@@ -36,7 +36,7 @@ export default function ADHDScience() {
             when reward comes quickly and pressure stays low. That's the whole design brief.
           </p>
           <p className="science-disclaimer">
-            Epic Mouse app is a motivation and focus companion, not a medical or clinical treatment for ADHD.
+            Epic Mouse app is a motivational writing companion, not a medical or clinical treatment for ADHD.
           </p>
         </Reveal>
 

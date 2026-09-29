@@ -1,7 +1,4 @@
 import { LuFlame, LuSparkles, LuBookOpen, LuPlay, LuArrowRight } from 'react-icons/lu'
-import WaitlistForm from './shared/WaitlistForm.jsx'
-import AppStoreBadge from './shared/AppStoreBadge.jsx'
-import GooglePlayBadge from './shared/GooglePlayBadge.jsx'
 import Sparkles from './shared/Sparkles.jsx'
 import Reveal from './shared/Reveal.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
@@ -21,7 +18,7 @@ export default function Hero() {
         <div className="hero-copy">
           <Reveal type="fade">
             <span className="eyebrow hero-eyebrow">
-              <LuSparkles size={14} /> Live now on PC & Google Play Store
+              <LuSparkles size={14} /> Live now!
             </span>
           </Reveal>
 
@@ -43,21 +40,9 @@ export default function Hero() {
           <Reveal type="fade" delay={220}>
             <div className="hero-pc-cta">
               <button type="button" className="btn btn-secondary" onClick={openLogin}>
-                For PC & Mac <LuArrowRight size={16} />
+                Try it free now <LuArrowRight size={16} />
               </button>
               <span className="hero-pc-cta-note">No download — write in your browser today</span>
-            </div>
-          </Reveal>
-
-          <Reveal type="fade" delay={240}>
-            <div className="hero-actions">
-              <WaitlistForm />
-            </div>
-            <div className="hero-badges">
-              <AppStoreBadge size="sm" />
-              <GooglePlayBadge size="sm" />
-              <p className="hero-badges-note">&middot; Free to join &middot; Updates only &middot;</p>
-                <p className='hero-badges-note'>&middot; We’ll never sell or share your information &middot;</p>
             </div>
           </Reveal>
 
@@ -180,25 +165,6 @@ export default function Hero() {
           color: var(--ink-faint);
           font-weight: 500;
         }
-        .hero-actions {
-          max-width: 520px;
-          margin-bottom: 18px;
-        }
-        .hero-badges {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 14px;
-          flex-wrap: wrap;
-          margin-bottom: 36px;
-        }
-        .hero-badges-note {
-          font-size: .7rem;
-          color: var(--ink-faint);
-          font-weight: 500;
-          align-content: center;
-          text-align: center;
-        }
         .hero-trust {
           display: flex;
           gap: 28px;
@@ -291,12 +257,6 @@ export default function Hero() {
             margin-inline: auto;
           }
           .hero-pc-cta {
-            justify-content: center;
-          }
-          .hero-actions {
-            margin-inline: auto;
-          }
-          .hero-badges {
             justify-content: center;
           }
           .hero-trust {

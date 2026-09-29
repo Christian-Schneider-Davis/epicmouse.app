@@ -1,5 +1,3 @@
-import AppStoreBadge from './shared/AppStoreBadge.jsx'
-import GooglePlayBadge from './shared/GooglePlayBadge.jsx'
 import Reveal from './shared/Reveal.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 
@@ -13,20 +11,13 @@ export default function FinalCTA() {
           <div className="final-cta-copy">
             <h2 className="final-cta-title">Your story is waiting to be written.</h2>
             <p className="final-cta-sub">
-              One tiny mouse, one blank page, and a whole world that grows with every word. The PC version is
-              live right now — Apple App Store and Google Play follow on Oct 1.
+              One tiny mouse, one blank page, and a whole world that grows with every word. Free to try right
+              now on PC.
             </p>
             <div className="final-cta-actions">
               <button type="button" className="btn btn-primary" onClick={openLogin}>
-                Try it free on PC
+                Try it free now
               </button>
-              <a href="#waitlist" className="btn btn-secondary">
-                Join the waitlist
-              </a>
-            </div>
-            <div className="final-cta-badges">
-              <AppStoreBadge size="sm" />
-              <GooglePlayBadge size="sm" />
             </div>
           </div>
           <div className="final-cta-visual" aria-hidden="true">
@@ -69,12 +60,6 @@ export default function FinalCTA() {
           flex-wrap: wrap;
           margin-bottom: 18px;
         }
-        .final-cta-badges {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          flex-wrap: wrap;
-        }
         .final-cta-visual {
           position: relative;
           align-self: stretch;
@@ -101,9 +86,6 @@ export default function FinalCTA() {
             margin-inline: auto;
           }
           .final-cta-actions {
-            justify-content: center;
-          }
-          .final-cta-badges {
             justify-content: center;
           }
           .final-cta-visual {

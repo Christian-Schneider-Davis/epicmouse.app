@@ -23,7 +23,6 @@ export default function Footer() {
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
           <a href="#faq">FAQ</a>
-          <a href="#waitlist">Join waitlist</a>
           <button type="button" className="footer-link-btn" onClick={() => setTermsOpen(true)}>
             Terms
           </button>
@@ -41,7 +40,7 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>&copy; {YEAR} Epic Mouse App. All rights reserved.</p>
-        <p className="footer-note">Currently in development. Not yet available on the App Store.</p>
+        <p className="footer-note">Developed with you in mind. Thank you.</p>
       </div>
 
       <Terms open={termsOpen} onClose={() => setTermsOpen(false)} />
