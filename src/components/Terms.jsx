@@ -118,6 +118,8 @@ QUESTIONS AND CONTACT INFORMATION
 
 If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact our Privacy Compliance Officer at Epicmouseapp@gmail.com.
 
+If you have an account, you can also delete it yourself at any time, along with everything you've written, from Settings inside the app — no need to contact us first.
+
 
 
 
@@ -328,10 +330,7 @@ CANCELLATION/REFUND POLICY
 All sales are final. We do not accept refunds or returns on any orders. If your product is damaged or not working properly, please contact  Epicmouseapp@gmail.com within twelve (12) business days to discuss a resolution. Should you have any questions regarding this policy, please contact Epicmouseapp@gmail.com.`
 
 /**
- * Terms & privacy modal — same legal text as the writing app's Terms
- * component, restyled to match the landing page's light cream/coral
- * theme (the app's version is dark-themed for its own UI).
- */
+ * Terms & privacy modal */
 export default function Terms({ open, onClose }) {
   useEffect(() => {
     if (!open) return
