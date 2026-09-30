@@ -27,7 +27,7 @@ export default function Footer() {
           <a href="#how-it-works">How it works</a>
           <a href="#faq">FAQ</a>
           <button type="button" className="footer-link-btn" onClick={() => setTermsOpen(true)}>
-            Terms
+            Legal
           </button>
         </nav>
 
